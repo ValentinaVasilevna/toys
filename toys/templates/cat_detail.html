@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load static %}
+{% block page_content %}
+<h1>Раздел: {{nm}}</h1>
+<div class="row">
+{% for c in cat_toys %}
+    <div class="col-md-2">
+        <div class="card mb-2">
+            <img src="{% static c.image %}" alt="" width="100%">
+            <div class="card-body">
+                <h5 class="card-title">{{ c.title }}</h5>
+                
+                <a href="all/{{c.pk}}"
+                   class="btn btn-primary">
+                    Подробнее
+                </a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+	<input type="button" onclick="history.back();" value="<< Вернуться"/>
+</div>
+{% endblock %}
+
+

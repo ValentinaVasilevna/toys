@@ -1,0 +1,8 @@
+*.pyc
+*~
+__pycache__
+run.cmd
+authenticate.txt
+text.txt
+по порядку.txt
+Новый ярлык Интернета.url

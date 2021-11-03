@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% load static %}
+{% block page_content %}
+<h1>Крючком и спицами</h1>
+<p>Свяжитесь со мной:
+<br>
+<a href="mailto:sernikr@mail.ru">по электронной почте</a>
+<br>
+<a href="https://vk.com/id684507208">через VK</a>
+<br>
+<a href="https://t.me/Valentina_Vasilevna">через Telegram</a>
+</p>
+
+
+<div class="row">
+    <div class="col-md-8">
+{% for c in cat %}
+	<a href="cat/{{c.pk}}" class="btn btn-primary">{{c.name}}</a>
+	
+	
+	{% endfor %}
+
+<br>
+        
+            <img src="static/img/photo_2021-11-02_10-36-46(2).jpg" alt="" width="100%">
+            <img src="static/img/photo_2021-11-02_10-36-27.jpg" alt="" width="100%">
+
+{% for c in cat %}
+	<a href="cat/{{c.pk}}" class="btn btn-primary">{{c.name}}</a>
+	
+	
+	{% endfor %}
+
+
+
+
+
+        
+    </div>
+</div>
+
+{% endblock %}

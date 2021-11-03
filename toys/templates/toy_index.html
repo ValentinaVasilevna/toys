@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load static %}
+{% block page_content %}
+<h1>Все мои изделия</h1>
+<div class="row">
+{% for toy in toys %}
+    <div class="col-md-2">
+        <div class="card mb-2">
+            <img src="{% static toy.image %}" alt="" width="100%">
+            <div class="card-body">
+                <h5 class="card-title">{{ toy.title }}</h5>
+                
+                <a href="{% url 'toy_detail' toy.pk %}"
+                   class="btn btn-primary">
+                    Подробнее
+                </a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
