@@ -2,28 +2,28 @@
 {% load static %}
 
 {% block page_content %}
-<h1>{{ toy.title }}</h1>
+<h1 class="lobster">{{ toy.title }}</h1>
 <div class="row">
     <div class="col-md-8">
         <img src="{% static toy.image %}" alt="" width="100%">
     </div>
     <div class="col-md-4">
-        <h5>Дополнительно:</h5>
-        <p>{{ toy.description }}</p>
+        <h2>Дополнительно:</h2>
+        <p><h2>{{ toy.description }}</h2></p>
         <br>
-        <h5>Использованы:</h5>
+        <h2>Использованы:</h2>
 		{% for material in materials %}
-			<p>{{ material.name }}</p>
+			<p><h2>{{ material.name }}</h2></p>
 			{% endfor %}
-		<p>Обращайтесь:
+		<p><h2>Обращайтесь:</h2>
 		<br>
-		<a href="mailto:sernikr@mail.ru">по электронной почте</a>
+		<a href="mailto:sernikr@mail.ru"><h2>по электронной почте</h2></a>
 		<br>
-		<a href="https://vk.com/id684507208">через VK</a>
+		<a href="https://vk.com/id684507208"><h2>через VK</h2></a>
 		<br>
-		<a href="https://t.me/Valentina_Vasilevna">через Telegram</a>
+		<a href="https://t.me/Valentina_Vasilevna"><h2>через Telegram</h2></a>
 		</p>
-		<input type="button" onclick="history.back();" value="<< Вернуться"/>
+		<h2><input type="button" onclick="history.back();" value="<< Вернуться"/></h2>
     </div>
 </div>
 {% endblock %}
